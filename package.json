@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "grapesjs": "^0.22.5",
+    "grapesjs-mjml": "^1.0.6",
     "grapesjs-tailwind": "^1.0.11"
   }
 }
