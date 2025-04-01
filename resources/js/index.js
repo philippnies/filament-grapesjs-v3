@@ -27,8 +27,11 @@ document.addEventListener('alpine:init', () => {
                         cleanId: true
                     });
                     var extract = content.match(/<body\b[^>]*>([\s\S]*?)<\/body>/);
-                    if(extract)
-                        this.state = extract[1];
+                    if(extract) {
+                        const html = extract[1];
+                        const css = this.instance.getCss();
+                        this.state = '<style>' + css + '</style>' + html;
+                    }
                     else
                         this.state = this.instance.getHtml();
                 })

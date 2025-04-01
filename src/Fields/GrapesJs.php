@@ -19,6 +19,7 @@ class GrapesJs extends Field
 
     protected array | Closure $plugins = [
         'grapesjs-tailwind',
+        'grapesjs-preset-newsletter',
     ];
 
     protected array | Closure $settings = [];
